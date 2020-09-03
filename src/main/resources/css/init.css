@@ -1,0 +1,120 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.root {
+    -fx-font-size: 14px;
+    -fx-font-family: sans-serif;
+    -fx-background-color: #ffffff;
+}
+
+.header-section {
+    -fx-padding: 25 90 25 0;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-background-color: #4267B2;
+}
+
+.left-section {
+	-fx-background-color: #d3d3d3;
+}
+
+.login-section {
+	-fx-padding: 10;
+}
+
+#header-text {
+	-fx-padding: 0 30 0 120;
+	-fx-font-size: 3em;
+}
+
+.header-section Label {
+    -fx-text-fill: #ffffff;
+    -fx-padding: 10px;
+}
+
+#carrito {
+	-fx-padding: 50 0 0 0;
+    -fx-background-color: transparent;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 16px;
+    -fx-cursor: hand;
+}
+
+.sidebar-section {
+	-fx-padding: 0 10 0 10;
+}
+
+.carrito-image {
+	-fx-padding: 0;
+}
+
+#nameText {
+	-fx-padding: 20 0 0 0;
+	-fx-font-weight: bold;
+    -fx-font-size: 18px;
+}
+
+#nameField {
+	-fx-padding: 10;
+	 -fx-background-color: -fx-text-box-border, -fx-background ;
+    -fx-background-insets: 0, 0 0 1 0 ;
+    -fx-background-radius: 0 ;
+}
+
+#nameField:focused {
+    -fx-background-color: -fx-focus-color, -fx-background ;
+}
+
+#passText {
+	-fx-padding: 20 0 0 0;
+	-fx-font-weight: bold;
+    -fx-font-size: 18px;
+}
+
+#passField {
+	-fx-padding: 10;
+	-fx-background-color: -fx-text-box-border, -fx-background;
+    -fx-background-insets: 0, 0 0 1 0 ;
+    -fx-background-radius: 0 ;
+}
+
+#passField:focused {
+    -fx-background-color: -fx-focus-color, -fx-background ;
+}
+
+.button-login {
+	-fx-padding: 15 0 0 135;
+    -fx-text-fill: #242d35;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.image-login {
+	-fx-padding: 10 0 0 65;
+}
+
+#loginText {
+	-fx-padding: 10 0 0 0;
+	-fx-font-weight: bold;
+    -fx-font-size: 18px;
+}
+
+.content-section {
+	-fx-background-color: #FFFFFF;
+	-fx-border-width: 15 0 0 0;
+    -fx-border-color: #FFFFFF;
+    -fx-wrap-text: true;
+    -fx-padding: 0;
+
+}
+
+#content {
+	-fx-padding:20 50 10 20;
+    -fx-wrap-text: true;
+    -fx-font-size: 16px;
+    -fx-alignment: center;
+}
+
+#footer-section {
+    -fx-alignment: center;
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #000000;
+}
