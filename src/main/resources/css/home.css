@@ -14,6 +14,7 @@
 
 .left-section {
 	-fx-background-color: #e6e6e6;
+	-fx-padding: 10;
 }
 
 .login-section {
@@ -46,56 +47,61 @@
 	-fx-padding: 0;
 }
 
-#nameText {
-	-fx-padding: 20 0 5 0;
+#seachLabel {
+	-fx-padding: 10 0 10 0;
 	-fx-font-weight: bold;
     -fx-font-size: 16px;
 }
 
-#nameField {
+.buttons-home-layout {
+	-fx-padding: 20 10 10 10;
+}
+
+#seachTextField {
 	-fx-padding: 7;
 	 -fx-background-color: -fx-text-box-border, -fx-background ;
     -fx-background-insets: 0, 0 0 1 0 ;
-    -fx-background-radius: 0 ;
+    -fx-background-radius: 0;
 }
 
-#nameField:focused {
+#seachTextField:focused {
     -fx-background-color: -fx-focus-color, -fx-background ;
-    -fx-prompt-text-fill: derive(-fx-control-inner-background,-30%);
+    -fx-prompt-text-fill: derive(-fx-control-inner-background,-50%);
 }
 
-#passText {
-	-fx-padding: 20 0 5 0;
-	-fx-font-weight: bold;
-    -fx-font-size: 16px;
-}
-
-#passField {
-	-fx-padding: 7;
-	-fx-background-color: -fx-text-box-border, -fx-background;
-    -fx-background-insets: 0, 0 0 1 0 ;
-    -fx-background-radius: 0 ;
-}
-
-#passField:focused {
-    -fx-background-color: -fx-focus-color, -fx-background ;
-}
-
-.button-login {
-	-fx-padding: 15 0 0 0;
-	-fx-padding: 10;
+.button-search {
     -fx-text-fill: #242d35;
     -fx-font-size: 16px;
     -fx-font-weight: bold;
 }
 
-.button-login-layout {
-	-fx-padding: 30 0 0 0;
+.button-clean {
+    -fx-text-fill: #242d35;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.buttons-hbox-home {
+	-fx-padding: 130 0 15 0;
 }
 
 .image-login {
-	-fx-padding: 10 0 20 37;
+	-fx-padding: 10 0 0 37;
 }
+
+.combo-section {
+	-fx-padding: 20 0 0 0;
+}
+
+#combo {
+	-fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.checkboxes {
+	-fx-padding: 20 0 0 0;
+}
+
 
 #loginText {
 	-fx-padding: 10 0 0 0;
@@ -105,11 +111,16 @@
 
 .content-section {
 	-fx-background-color: #FFFFFF;
-	-fx-border-width: 15 0 0 0;
     -fx-border-color: #FFFFFF;
     -fx-wrap-text: true;
-    -fx-padding: 0;
+    -fx-padding: 20 0 0 50;
 
+}
+
+.noheader .column-header-background {
+    -fx-max-height: 0;
+    -fx-pref-height: 0;
+    -fx-min-height: 0;
 }
 
 #content {
