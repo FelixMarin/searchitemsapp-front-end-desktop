@@ -14,7 +14,7 @@ public class InitImpl implements Init {
 	public Scene createPage() throws IOException {
 
 		BorderPane root = (BorderPane) FXMLLoader.load(getClass().getResource("/fxml/init.fxml"));
-		Scene scene = new Scene(root, 1024, 680);
+		Scene scene = new Scene(root, 1024, 720);
 		scene.getStylesheets().add(getClass().getResource("/css/init.css").toExternalForm());
 
 		return scene;

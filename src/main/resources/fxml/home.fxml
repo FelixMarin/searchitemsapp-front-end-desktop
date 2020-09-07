@@ -1,82 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
 <BorderPane xmlns:fx="http://javafx.com/fxml/1"
-	fx:controller="com.sia.desktop.controller.MainController">
+	fx:controller="com.sia.desktop.Main">
 	<top>
 		<BorderPane styleClass="header-section">
-			<left>
-				<Label id="header-text" text="Application Header"></Label>
-			</left>
-			<right>
-				<Button id="account" text="Account">
-					<graphic>
-						<ImageView fitHeight="24" fitWidth="24"
-							pickOnBounds="true" preserveRatio="true">
-							<image>
-								<Image url="@../images/home-150499_1280.png" />
-							</image>
-						</ImageView>
-					</graphic>
-				</Button>
-			</right>
+			<center>
+				<HBox alignment="CENTER">
+					<children>
+						<Label id="header-text" text="Price Rank"></Label>
+					</children>
+				</HBox>
+			</center>
 		</BorderPane>
 	</top>
 	<left>
-		<VBox styleClass="sidebar-section">
-			<children>
-				<Label text="Sidebar Item1"></Label>
-			</children>
-		</VBox>
+		<Pane styleClass="left-section" prefHeight="200.0"
+			prefWidth="220" BorderPane.alignment="TOP_CENTER">
+			<VBox styleClass="buttons-home-layout" prefWidth="220.0">
+				<children>
+					<TextField fx:id="seachTextField" prefWidth="220"
+						prefHeight="30" promptText="Buscar producto..." />
+				</children>
+				<children>
+					<VBox spacing="11" styleClass="checkboxes">
+						<children>
+							<CheckBox fx:id="alcampo" text="Alcampo" />
+							<CheckBox fx:id="caprabo" text="Caprabo" />
+							<CheckBox fx:id="carrefour" text="Carrefour" />
+							<CheckBox fx:id="condis" text="Condis" />
+							<CheckBox fx:id="consum" text="Consum" />
+							<CheckBox fx:id="dia" text="Dia" />
+							<CheckBox fx:id="eci" text="El Corte Inglés" />
+							<CheckBox fx:id="eroski" text="Eroski" />
+							<CheckBox fx:id="lidl" text="Lidl" />
+							<CheckBox fx:id="mercadona" text="Mercadona" />
+						</children>
+					</VBox>
+				</children>
+				<children>
+					<VBox styleClass="combo-section">
+						<ComboBox fx:id="comboBox" prefWidth="220.0"
+							promptText="Ordenar por:">
+							<items>
+								<FXCollections fx:factory="observableArrayList">
+									<String fx:value="Precio" />
+									<String fx:value="Precio/Kilo" />
+								</FXCollections>
+							</items>
+						</ComboBox>
+					</VBox>
+				</children>
+				<children>
+					<HBox spacing="8" styleClass="buttons-hbox-home"
+						prefHeight="50.0" BorderPane.alignment="BOTTOM_RIGHT">
+						<children>
+							<Button styleClass="button-search" layoutX="125"
+								layoutY="150" text="Buscar" prefWidth="125"
+								onAction="#homeControllerSearchButton" fx:id="searchButton" />
+						</children>
+						<children>
+							<Button styleClass="button-clean" layoutX="125"
+								layoutY="150" text="Limpiar" prefWidth="125"
+								onAction="#homeControllerCleanButton" fx:id="cleanButton" />
+						</children>
+					</HBox>
+				</children>
+			</VBox>
+		</Pane>
 	</left>
 	<center>
-		<VBox alignment="CENTER" styleClass="content-section">
-			<HBox alignment="BOTTOM_CENTER">
-				<children>
-					<ImageView id="main-image" fitHeight="440" fitWidth="440"
-						pickOnBounds="true" preserveRatio="true">
-						<image>
-							<Image url="@../images/pricerank.png" />
-						</image>
-					</ImageView>
-				</children>
-			</HBox>
-			<children>
-				<Label id="content">
-					<text>
-						Lorem Ipsum is simply dummy text of the printing and
-						typesetting industry. Lorem Ipsum has been the industry's
-						standard
-						dummy text ever since the 1500s, when an unknown
-						printer took a
-						galley of type and scrambled it to make a
-						type specimen book. It
-						has survived not only five centuries,
-						but also the leap into
-						electronic typesetting, remaining
-						essentially unchanged. It was
-						popularised in the 1960s with
-						the release of Letraset sheets
-						containing Lorem Ipsum
-						passages, and more recently with desktop
-						publishing software
-						like Aldus PageMaker including versions of
-						Lorem Ipsum.
-					</text>
-				</Label>
-			</children>
-		</VBox>
 	</center>
-	<bottom>
-		<HBox id="footer-section">
-			<children>
-				<Label text="Copyright 2020 CalliCoder"></Label>
-			</children>
-		</HBox>
-	</bottom>
 </BorderPane>
