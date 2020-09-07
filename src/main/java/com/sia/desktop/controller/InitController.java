@@ -1,5 +1,7 @@
 package com.sia.desktop.controller;
 
+import java.io.IOException;
+
 public interface InitController {
-	abstract void actionEventoButtonSubmit();
+	abstract boolean actionEventoButtonSubmit() throws IOException;
 }

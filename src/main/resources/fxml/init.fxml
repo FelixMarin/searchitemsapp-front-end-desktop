@@ -13,7 +13,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.PasswordField?>
 <BorderPane xmlns:fx="http://javafx.com/fxml/1"
-	fx:controller="com.sia.desktop.controller.impl.InitControllerImpl">
+	fx:controller="com.sia.desktop.Main">
 	<top>
 		<BorderPane styleClass="header-section">
 			<center>
@@ -27,7 +27,7 @@
 	</top>
 	<left>
 		<Pane styleClass="left-section" prefHeight="200.0"
-			prefWidth="300" BorderPane.alignment="TOP_CENTER">
+			prefWidth="240" BorderPane.alignment="TOP_CENTER">
 			<VBox styleClass="login-section">
 				<VBox styleClass="image-login">
 					<children>
@@ -40,25 +40,20 @@
 					</children>
 				</VBox>
 				<children>
-					<Label id="nameText" text="Full Name: " />
-					<TextField fx:id="nameField" prefWidth="280"
-						prefHeight="40" />
+					<Label id="nameText" text="User Name: " />
+					<TextField fx:id="nameField" prefWidth="220"
+						prefHeight="30" promptText="User name" />
 				</children>
 				<children>
 					<Label id="passText" text="Password: " />
-					<PasswordField fx:id="passField" prefWidth="280"
-						prefHeight="40" />
+					<PasswordField fx:id="passField" prefWidth="220"
+						prefHeight="30"  promptText="Password" />
 				</children>
-				<VBox styleClass="button-login">
+				<VBox styleClass="button-login-layout">
 					<children>
-						<Button fx:id="submitButton" text="Login" prefWidth="140"
-							prefHeight="40" defaultButton="true" GridPane.columnIndex="0"
-							GridPane.rowIndex="4" GridPane.columnSpan="2"
-							GridPane.rowSpan="1" GridPane.halignment="CENTER" onAction="#actionEventoButtonSubmit">
-							<GridPane.margin>
-								<Insets top="20" right="0" bottom="20" left="0"></Insets>
-							</GridPane.margin>
-						</Button>
+						<Button styleClass="button-login" layoutX="226"
+							layoutY="150" text="Login" prefWidth="220"
+							onAction="#initControllerLogin" fx:id="submitButton" />
 					</children>
 				</VBox>
 			</VBox>
@@ -67,7 +62,7 @@
 	<center>
 		<VBox alignment="TOP_CENTER" styleClass="content-section">
 			<children>
-				<ImageView id="main-image" fitWidth="680"
+				<ImageView id="main-image" fitWidth="740"
 					pickOnBounds="true" preserveRatio="true">
 					<image>
 						<Image url="@../images/supermarket-main.jpg" />
